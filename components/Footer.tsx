@@ -13,15 +13,23 @@ export default function Footer() {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#about">About</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/#about">About</a>
+            </li>
             <li>
               <a href="https://www.margaretmungai.com/" target="_blank">
                 Margaret Mungai
               </a>
             </li>
-            <li><a href="/#testimonials">Testimonials</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li>
+              <a href="/#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="/#contact">Contact</a>
+            </li>
           </ul>
         </div>
 
@@ -49,8 +57,10 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>
-          &copy; <span id="year"></span> Margaret Mungai. All rights reserved.
+          &copy; {new Date().getFullYear()} Margaret Mungai. All rights
+          reserved.
         </p>
+
         <p className="dev-credit small">
           Developed with ❤️ by
           <a
@@ -61,12 +71,14 @@ export default function Footer() {
           </a>
         </p>
       </div>
-      
-      <script dangerouslySetInnerHTML={{
-        __html: `
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
           document.getElementById("year").textContent = new Date().getFullYear();
-        `
-      }} />
+        `,
+        }}
+      />
     </footer>
   );
 }
