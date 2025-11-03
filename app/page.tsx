@@ -264,7 +264,7 @@ export default function Home() {
           href="https://whatsapp.com/channel/0029Vb6GO2q5PO0rVfgF4Q3g"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-success"
+          className="filter-btn active"
         >
           Join Our WhatsApp Channel
         </a>
