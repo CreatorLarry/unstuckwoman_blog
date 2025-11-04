@@ -30,13 +30,27 @@ export default async function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)', fontFamily: 'var(--font-primary)' }}>
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundColor: "var(--color-bg)",
+        color: "var(--color-text)",
+        fontFamily: "var(--font-primary)",
+      }}
+    >
       {/* Header */}
       <Navbar />
 
       {/* Blog Section */}
       <main className="container py-5">
-        <h2 className="text-center mb-5" style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', color: '#2a2a2a' }}>
+        <h2
+          className="text-center mb-5"
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontSize: "2.5rem",
+            color: "#2a2a2a",
+          }}
+        >
           Our Blog
         </h2>
         <div className="row" id="blog-list">
@@ -44,44 +58,58 @@ export default async function BlogPage() {
             <div className="col-md-4 mb-4" key={post._id}>
               <div className="blog-card h-100">
                 {post.mainImage?.asset?.url ? (
-                  <div className="position-relative" style={{ height: '220px' }}>
+                  <div
+                    className="position-relative"
+                    style={{ height: "220px" }}
+                  >
                     <Image
                       src={post.mainImage.asset.url}
                       alt={post.title}
                       fill
                       className="card-img-top"
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: "cover" }}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                 ) : (
-                  <div className="bg-gray-200" style={{ height: '220px' }}></div>
+                  <div
+                    className="bg-gray-200"
+                    style={{ height: "220px" }}
+                  ></div>
                 )}
                 <div className="blog-card-body">
-                  <h5 style={{ fontFamily: 'var(--font-heading)', fontWeight: '600', fontSize: '1.25rem', color: '#2a2a2a' }}>
+                  <h5
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      fontWeight: "600",
+                      fontSize: "1.25rem",
+                      color: "#2a2a2a",
+                    }}
+                  >
                     {post.title}
                   </h5>
-                  <p style={{ color: '#555', fontSize: '0.95rem' }}>
+                  <p style={{ color: "#555", fontSize: "0.95rem" }}>
                     {post.excerpt || "Click to read more..."}
                   </p>
                   <div className="blog-meta">
-                    <small style={{ fontSize: '0.85rem', color: '#777' }}>
+                    <small style={{ fontSize: "0.85rem", color: "#777" }}>
                       {new Date(post.publishedAt).toDateString()}
                     </small>
                   </div>
                   <Link
                     href={`/post/${post.slug.current}`}
                     className="btn btn-primary mt-3"
-                    style={{ 
-                      background: 'linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end))',
-                      border: 'none',
-                      fontWeight: '600',
-                      borderRadius: '50px',
-                      padding: '0.5rem 1.5rem',
-                      color: 'var(--color-white)',
-                      transition: '0.3s ease',
-                      textDecoration: 'none',
-                      display: 'inline-block'
+                    style={{
+                      background:
+                        "linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end))",
+                      border: "none",
+                      fontWeight: "600",
+                      borderRadius: "50px",
+                      padding: "0.5rem 1.5rem",
+                      color: "var(--color-white)",
+                      transition: "0.3s ease",
+                      textDecoration: "none",
+                      display: "inline-block",
                     }}
                   >
                     Read More
@@ -92,6 +120,27 @@ export default async function BlogPage() {
           ))}
         </div>
       </main>
+
+      <section className="join-community text-center py-5">
+        <h2>Join the Unstuck Woman Community</h2>
+        <p>
+          Walk with women who are rewriting their story. Connect with us below:
+        </p>
+        <a
+          href="https://whatsapp.com/channel/0029Vb6GO2q5PO0rVfgF4Q3g"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" btn-primary mt-3"
+        >
+          Join Our WhatsApp Channel
+        </a>
+      </section>
+
+      <div className="section-divider">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
+        </svg>
+      </div>
 
       <Footer />
     </div>

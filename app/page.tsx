@@ -255,27 +255,6 @@ export default function Home() {
         </svg>
       </div>
 
-      <section className="join-community text-center py-5">
-        <h2>Join the Unstuck Woman Community</h2>
-        <p>
-          Walk with women who are rewriting their story. Connect with us below:
-        </p>
-        <a
-          href="https://whatsapp.com/channel/0029Vb6GO2q5PO0rVfgF4Q3g"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="filter-btn active"
-        >
-          Join Our WhatsApp Channel
-        </a>
-      </section>
-
-      <div className="section-divider">
-        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
-        </svg>
-      </div>
-
       {/* Pictorial Section */}
       <section className="gallery-section" id="gallery">
         <div className="container">
@@ -459,6 +438,27 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <div className="section-divider">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
+        </svg>
+      </div>
+
+      <section className="join-community text-center py-5">
+        <h2>Join the Unstuck Woman Community</h2>
+        <p>
+          Walk with women who are rewriting their story. Connect with us below:
+        </p>
+        <a
+          href="https://whatsapp.com/channel/0029Vb6GO2q5PO0rVfgF4Q3g"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" btn-primary mt-3"
+        >
+          Join Our WhatsApp Channel
+        </a>
       </section>
 
       <div className="section-divider">
